@@ -3,13 +3,12 @@ using namespace std;
 
 int main (){
     string name;
-    int ready,a;
-    a=0;
-    while(a==0){    
+    int ready;
+        
     cout << "Ingresa tu nombre: " << endl;
     cin >> name;
     cout << "Hola " << name << ", bienvenido a esta maravillosa experiencia interactiva," << endl
-         << "en donde te adentras en una historia llena de misterios y aventuras." << endl;
+         << "en donde te adentras en una historia llena de misterios." << endl;
     cout << "En esta historia tú eres el protagonista, y tu destino depende de las decisiones que tomes." << endl;
     
     cout << "¿Estás listo para comenzar?" << endl << "1. Si" << endl << "2. No" << endl;
@@ -40,10 +39,10 @@ int main (){
         
         int pista = -1;  
         
-        while(decision1 != 0){
+
             if(decision1 == 1){
-                cout << "Decides seguir a Lucas, quien parece tener una idea de lo que está pasando." << endl;
-                cout << "Después de caminar un rato, llegas a un claro donde hay una cabaña." << endl;
+                        cout << "Decides seguir a Lucas, quien parece tener una idea de lo que está pasando." << endl;
+                cout << "Después de caminar un rato, llegas a una cabaña con aspecto sucio y deteriorado." << endl;
                 cout << "Lucas te dice que cree que la cabaña puede tener respuestas." << endl;
                 cout << "¿Qué haces?" << endl;
                 int decision1_1;
@@ -118,10 +117,10 @@ int main (){
                 } else if (decision1_1 == 3){
                     cout << "Decides decirle a Lucas que espere en la cabaña y seguir explorando el bosque solo." << endl;
                     cout << "Lucas parece un poco asustado, pero accede a esperar." << endl;
-                    decision1 = decision1 + 1;  
+                    decision1 = 2;  
                 }
             } 
-            else if (decision1 == 2){
+            if (decision1 == 2){
                 cout << "Decides explorar la zona por tu cuenta." << endl;
                 cout << "Mientras caminas, encuentras un peluche tirado en el suelo." << endl;
                 cout << "Es un peluche viejo y sucio, pero parece tener un aire familiar." << endl;
@@ -180,7 +179,7 @@ int main (){
                     pista = 1;  
                 }
             }
-            else if (decision1 == 3){
+            if (decision1 == 3){
                 cout << "Decides huir corriendo en la dirección contraria." << endl;
                 cout << "Mientras corres, te das cuenta de que el bosque se vuelve cada vez más oscuro y tenebroso." << endl;
                 cout << "Luego de un tiempo, cansado y ya más tranquilo, decides parar a descansar." << endl;
@@ -246,8 +245,7 @@ int main (){
                 cout << "Al asomarte, ves a Lucas, quien parece estar un poco asustado." << endl;
                 pista = 2; 
             }
-            break; 
-        }
+        
         
         cout << "Lucas comienza a llorar, y tú, casado y confundido, decides abrazarlo." << endl;
         cout << "Mientras lo abrazas, sientes que algo no está bien." << endl
@@ -319,26 +317,20 @@ int main (){
         
     
     cout<<"suena la alarma, un nuevo dia comienza."<<endl
-    <<"haces tu rutina de cada mañana y mientras desayunas escuchas las noticias reproduciendo..."<<endl
-    <<"NOTICIA DE ULTIMO MOMENTO: El dia de ayer, Jueves 27 de marzo, se encontró el cuerpo de un menor a orillas de un rio."<<endl
-    <<"Fue indentificado como Jose Lucas Davalos Ortega con 5 años de edad."<<endl
-    <<"El cuerpo fue encontrado con multiples heridas, un un particular golpe en la cabeza."<<endl
-    <<"La policia al intentar dar con sus familares, encontraron a la madre del niño muerta por asesinato en su domicilio, "<<endl
-    <<"en el cual se encontraron gravaciones y evidencias de multiples maltratos de parte de su cunyugue,"<<endl
-    <<"el cual esta siendo buscado en estos momentos para ser procesado por la justicia."<<endl;
+    <<"haces tu rutina de cada mañana y mientras desayunas escuchas las noticias reproduciendo..."<<endl;
+    cout << "NOTICIA DE ULTIMO MOMENTO:" << endl;
+    cout << "El dia de ayer, Jueves 27 de marzo, se descubrio el cuerpo sin vida de un menor a orillas de un rio, "
+         << "lo que ha dejado a la comunidad completamente consternada." << endl;
+    cout << "El pequeño fue identificado como Jose Lucas Dávalos Ortega, de tan solo 5 años de edad. "
+         << "El cadaver presentaba multiples heridas y, en particular, un golpe severo en la cabeza, lo que sugiere un acto de violencia extrema." << endl;
+    cout << "Al intentar localizar a sus familiares, las autoridades realizaron un descubrimiento aun mas perturbador: "
+         << "la madre del niño fue encontrada muerta en su domicilio, victima de un asesinato. En el lugar, los investigadores hallaron grabaciones y evidencia "
+         << "que apuntan a que la mujer sufria constantes maltratos a manos de su pareja." << endl;
+    cout << "El principal sospechoso, quien ya esta siendo intensamente buscado, es el cónyuge de la madre, y se espera que sea procesado judicialmente "
+         << "por estos crimenes tan desgarradores." << endl;
     }else{
         cout << "¡No hay problema! Puedes volver cuando quieras." << endl;
     }
-    int reinicio;
-    cout<<"deseas reiniciar?"<<endl;
-    cout<<"1) Si"<<endl;
-    cout<<"2) No"<<endl;
-    cin>>reinicio;
-    if(reinicio==1){
-        cout<<"reiniciando"<<endl;
-    }else{
-        a++;
-    }
-    }
+    
     return 0;
 }
